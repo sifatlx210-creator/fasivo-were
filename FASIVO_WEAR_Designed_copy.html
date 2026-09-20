@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="FASIVO WEAR — আধুনিক ও স্টাইলিশ পোশাকের কালেকশন।">
+<title>FASIVO WEAR | Your Style, Your Identity</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+:root{
+  --ink:#171717;--muted:#6b7280;--cream:#f8f5ef;--gold:#c49a5a;
+  --line:#e8e2d8;--green:#15803d;--white:#fff;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:'Hind Siliguri',Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.7}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:20;background:rgba(20,20,20,.96);color:#fff;padding:15px 6%;display:flex;justify-content:space-between;align-items:center;gap:20px;box-shadow:0 5px 25px #0002}
+.logo{font-family:'Playfair Display',serif;font-size:25px;font-weight:800;letter-spacing:1.5px}
+.logo span{color:var(--gold)}
+nav{display:flex;align-items:center;gap:22px}
+nav a{font-size:14px;color:#f5f5f5;transition:.25s}
+nav a:hover{color:var(--gold)}
+.hero{position:relative;overflow:hidden;min-height:570px;padding:90px 6%;display:flex;align-items:center;background:linear-gradient(120deg,#171717 0%,#29251f 58%,#6f5940 100%);color:#fff}
+.hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid #ffffff30;border-radius:50%;right:-120px;top:-100px}
+.hero-content{position:relative;z-index:1;max-width:700px}
+.eyebrow{color:#e7c58f;letter-spacing:4px;text-transform:uppercase;font-size:12px;font-weight:700}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(42px,7vw,78px);line-height:1.1;margin:18px 0}
+.hero h1 span{color:#e7c58f}
+.hero p{max-width:550px;color:#e5e5e5;font-size:17px;margin:0 0 22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:#171717;padding:12px 25px;border-radius:999px;font-weight:700;transition:.25s;border:1px solid var(--gold)}
+.btn:hover{transform:translateY(-3px);background:#e4bd82}
+.btn.alt{background:transparent;color:#fff;border-color:#ffffff70;margin-left:8px}
+section{padding:75px 6%;max-width:1240px;margin:auto}
+.section-head{text-align:center;margin-bottom:35px}
+.section-head .eyebrow{color:var(--gold)}
+h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);margin:7px 0 8px;line-height:1.2}
+.section-head p{color:var(--muted);margin:0}
+.categories{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:25px 0}
+.category{border:1px solid var(--line);border-radius:999px;padding:7px 18px;font-size:14px;background:#fff}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:22px}
+.card{position:relative;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 8px 25px #1b1b1b0b;transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 35px #1b1b1b18}
+.card-media{position:relative;background:#f4f1eb;overflow:hidden}
+.card img{display:block;width:100%;height:275px;object-fit:cover;transition:.4s}
+.card:hover img{transform:scale(1.04)}
+.tag{position:absolute;top:13px;left:13px;background:#171717;color:#fff;padding:4px 10px;border-radius:999px;font-size:11px}
+.card-content{padding:18px}
+.card h3{margin:0 0 4px;font-size:20px}
+.card p{margin:0 0 8px;color:var(--muted);font-size:14px;min-height:48px}
+.price{font-size:20px;font-weight:700;color:#171717}
+.order{display:flex;justify-content:center;align-items:center;gap:7px;background:var(--green);color:#fff;padding:10px;border-radius:999px;margin-top:14px;font-weight:600;transition:.25s}
+.order:hover{background:#166534;transform:translateY(-2px)}
+.about{max-width:none;background:var(--cream);text-align:center}
+.about-inner{max-width:800px;margin:auto}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}
+.feature{padding:22px;border:1px solid #e8dfd0;border-radius:16px;background:#fff}
+.feature strong{display:block;font-size:17px;margin-bottom:5px}
+.feature span{color:var(--muted);font-size:14px}
+.contact{text-align:center}
+.contact-box{background:#171717;color:#fff;border-radius:24px;padding:48px 25px}
+.contact-box p{color:#d1d5db}
+footer{background:#111;color:#d1d5db;text-align:center;padding:28px 6%;font-size:14px}
+footer strong{color:#fff}
+@media(max-width:700px){
+  header{padding:13px 5%;flex-direction:column;gap:8px}
+  .logo{font-size:23px}
+  nav{gap:12px;flex-wrap:wrap;justify-content:center}
+  nav a{font-size:12px}
+  .hero{min-height:520px;padding:70px 6%}
+  .hero h1{font-size:48px}
+  .hero p{font-size:15px}
+  .btn{padding:11px 18px;font-size:14px}
+  section{padding:55px 5%}
+  .products{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .card{border-radius:13px}
+  .card img{height:205px}
+  .card-content{padding:12px}
+  .card h3{font-size:16px}
+  .card p{font-size:12px;min-height:42px}
+  .price{font-size:17px}
+  .order{font-size:12px;padding:9px 5px}
+  .features{grid-template-columns:1fr}
+  .btn.alt{margin-left:3px}
+}
+@media(max-width:390px){
+  .products{grid-template-columns:1fr}
+  .card img{height:260px}
+}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#home">FASIVO <span>WEAR</span></a>
+  <nav>
+    <a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">New Collection 2026</div>
+    <h1>Wear Your <span>Style.</span><br>Own Your Identity.</h1>
+    <p>আপনার স্টাইল, আপনার পরিচয়। FASIVO WEAR-এর আধুনিক ও স্টাইলিশ পোশাকের কালেকশন আবিষ্কার করুন।</p>
+    <a class="btn" href="#shop">Shop Collection ↗</a>
+    <a class="btn alt" href="#contact">Contact Us</a>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="section-head">
+    <div class="eyebrow">Our Collection</div>
+    <h2>Find Your Everyday Style</h2>
+    <p>আপনার পছন্দের পোশাক বেছে নিন এবং WhatsApp-এ অর্ডার করুন।</p>
+  </div>
+  <div class="categories">
+    <span class="category">T-Shirts</span><span class="category">Shirts</span>
+    <span class="category">Pants</span><span class="category">Panjabi</span>
+  </div>
+  <div class="products">
+    <article class="card">
+      <div class="card-media"><span class="tag">Popular</span><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=85" alt="Premium T-shirt"></div>
+      <div class="card-content"><h3>Premium T-Shirt</h3><p>আরামদায়ক ও স্টাইলিশ টি-শার্ট</p><div class="price">৳650</div><a class="order" href="https://wa.me/8801629437136?text=আমি%20Premium%20T-Shirt%20অর্ডার%20করতে%20চাই" target="_blank" rel="noopener">WhatsApp Order ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-media"><span class="tag">New</span><img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=800&q=85" alt="Premium Shirt"></div>
+      <div class="card-content"><h3>Premium Shirt</h3><p>দৈনন্দিন ব্যবহারের জন্য স্মার্ট শার্ট</p><div class="price">৳850</div><a class="order" href="https://wa.me/8801629437136?text=আমি%20Premium%20Shirt%20অর্ডার%20করতে%20চাই" target="_blank" rel="noopener">WhatsApp Order ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-media"><img src="https://images.unsplash.com/photo-1517438476312-10d79c077509?auto=format&fit=crop&w=800&q=85" alt="Classic Pants"></div>
+      <div class="card-content"><h3>Classic Pants</h3><p>কমফোর্ট ও স্টাইলের পারফেক্ট কম্বিনেশন</p><div class="price">দাম পরে</div><a class="order" href="https://wa.me/8801629437136?text=আমি%20Classic%20Pants%20অর্ডার%20করতে%20চাই" target="_blank" rel="noopener">WhatsApp Order ↗</a></div>
+    </article>
+    <article class="card">
+      <div class="card-media"><span class="tag">Featured</span><img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=85" alt="Classic Panjabi"></div>
+      <div class="card-content"><h3>Classic Panjabi</h3><p>ঐতিহ্যবাহী ও আধুনিক পাঞ্জাবি</p><div class="price">৳950</div><a class="order" href="https://wa.me/8801629437136?text=আমি%20Classic%20Panjabi%20অর্ডার%20করতে%20চাই" target="_blank" rel="noopener">WhatsApp Order ↗</a></div>
+    </article>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="eyebrow">About Our Brand</div>
+    <h2>Simple Style. Confident You.</h2>
+    <p>FASIVO WEAR একটি ফ্যাশন ব্র্যান্ড। আমরা মানসম্মত ও স্টাইলিশ পোশাক সহজে আপনার কাছে পৌঁছে দিতে চাই।</p>
+    <div class="features">
+      <div class="feature"><strong>Quality First</strong><span>মানসম্মত পোশাকের প্রতি গুরুত্ব</span></div>
+      <div class="feature"><strong>Modern Style</strong><span>আধুনিক ও ট্রেন্ডি কালেকশন</span></div>
+      <div class="feature"><strong>Easy Ordering</strong><span>WhatsApp-এ সহজে অর্ডার</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-box">
+    <div class="eyebrow">Let's Connect</div>
+    <h2>Ready to Upgrade Your Wardrobe?</h2>
+    <p>অর্ডার বা যেকোনো প্রশ্নের জন্য আমাদের WhatsApp-এ যোগাযোগ করুন।</p>
+    <a class="btn" href="https://wa.me/8801629437136" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 <strong>FASIVO WEAR</strong>. All rights reserved.</footer>
+</body>
+</html>
